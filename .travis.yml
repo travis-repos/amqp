@@ -1,6 +1,6 @@
 bundler_args: --without development
 script: "bundle exec rake spec:ci"
-before_build: ./bin/ci/before_build.sh
+before_script: ./bin/ci/before_build.sh
 notifications:
   disabled: true
 rvm:
