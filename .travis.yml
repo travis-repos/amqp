@@ -1,5 +1,6 @@
 bundler_args: --without development
 script: "bundle exec rake spec:ci"
+before_build: ./bin/ci/before_build.sh
 notifications:
   disabled: true
 rvm:
@@ -7,6 +8,7 @@ rvm:
   - 1.9.2
   - ree
   - jruby
+  - rbx
 gemfile:
   - Gemfile
   - gemfiles/eventmachine-pre
